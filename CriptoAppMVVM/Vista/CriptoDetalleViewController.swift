@@ -32,6 +32,10 @@ class CriptoDetalleViewController: UIViewController {
         currencyPickerView.dataSource = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel?.checkInternetConnectivity()
+    }
+    
     private func configurarVista(){
         guard let monedaRecibida = recibirMoneda else { return }
         self.navigationItem.title = monedaRecibida.nombre
@@ -62,6 +66,24 @@ class CriptoDetalleViewController: UIViewController {
         viewModel?.$dateLastPrice.sink { [weak self] date in
             self?.fecha.text = date
         }.store(in: &cancellables)
+        
+        viewModel?.$internetConnection.sink { [weak self] connection in
+            if !connection {
+                //Show alert
+                DispatchQueue.main.async {
+                    self?.mostrarAlerta(titulo: "Atención", mensaje: "No tienes conexion a internet para actualizar el precio de la moneda seleccionada. Verifica e intenta de nuevo.")
+                }
+            }
+        }.store(in: &cancellables)
+    }
+    
+    func mostrarAlerta(titulo: String, mensaje: String) {
+        let alerta = UIAlertController(title: titulo, message: mensaje, preferredStyle: .alert)
+        let accionAceptar = UIAlertAction(title: "OK", style: .default) { _ in
+            //Do something
+        }
+        alerta.addAction(accionAceptar)
+        present(alerta, animated: true)
     }
     
     private func getPrice(currency: String){

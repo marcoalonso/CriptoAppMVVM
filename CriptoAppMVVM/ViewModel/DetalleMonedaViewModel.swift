@@ -7,12 +7,14 @@
 
 import Foundation
 import Combine
+import Network
 
 class DetalleMonedaViewModel {
     @Published var bitcoinPrice = "0.0"
     @Published var dateLastPrice = "04 Jun 2023"
     @Published var errorMessage = ""
     @Published var showLoading = false
+    @Published var internetConnection = true
     
     var exchangeRate = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
     
@@ -52,6 +54,29 @@ class DetalleMonedaViewModel {
                     self?.dateLastPrice = date
                     self?.showLoading = false
                 }
+            }
+        }
+    }
+    
+    func checkInternetConnectivity() {
+        let monitor = NWPathMonitor()
+        let queue = DispatchQueue(label: "Monitor")
+        
+        
+        monitor.start(queue: queue)
+        
+        monitor.pathUpdateHandler = { [weak self] path in
+            
+            if path.usesInterfaceType(.cellular) {
+                print("Conection with mobile data")
+            } else if path.usesInterfaceType(.wifi) {
+                print("Conection with wifi")
+            }
+            
+            if path.status == .satisfied {
+                self?.internetConnection = true
+            } else {
+                self?.internetConnection = false
             }
         }
     }
