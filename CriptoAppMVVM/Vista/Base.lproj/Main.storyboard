@@ -129,18 +129,29 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="JAX-SY-teC">
+                                <rect key="frame" x="171.66666666666666" y="401" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Mgj-5I-W12"/>
+                                    <constraint firstAttribute="height" constant="50" id="zcZ-eI-YDE"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1sG-Cd-ZBT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="1Dq-sF-Ecg" secondAttribute="trailing" constant="10" id="5yD-Qw-nhi"/>
+                            <constraint firstItem="JAX-SY-teC" firstAttribute="centerX" secondItem="XSu-lz-wwH" secondAttribute="centerX" id="8yG-Eh-zXe"/>
                             <constraint firstAttribute="bottom" secondItem="1Dq-sF-Ecg" secondAttribute="bottom" constant="10" id="Hfg-o1-poc"/>
+                            <constraint firstItem="JAX-SY-teC" firstAttribute="centerY" secondItem="XSu-lz-wwH" secondAttribute="centerY" id="R5B-OD-lm3"/>
                             <constraint firstItem="1Dq-sF-Ecg" firstAttribute="top" secondItem="1sG-Cd-ZBT" secondAttribute="top" constant="10" id="tdh-6G-f9t"/>
                             <constraint firstItem="1Dq-sF-Ecg" firstAttribute="leading" secondItem="XSu-lz-wwH" secondAttribute="leading" constant="10" id="zZh-cH-Qal"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iOJ-MC-m69"/>
                     <connections>
+                        <outlet property="activityIndicatorLoading" destination="JAX-SY-teC" id="VnN-Ir-RzV"/>
+                        <outlet property="currencyPickerView" destination="fMF-m8-FIC" id="Uie-Sm-6tL"/>
                         <outlet property="fecha" destination="Esm-mj-7Ma" id="qlo-1Z-8S5"/>
                         <outlet property="logoMoneda" destination="LYx-EH-WYy" id="ayP-cL-mhC"/>
                         <outlet property="precioLabel" destination="tcx-rB-SMB" id="Wpm-gY-edy"/>

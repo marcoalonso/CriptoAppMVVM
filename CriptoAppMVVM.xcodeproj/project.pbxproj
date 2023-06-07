@@ -20,6 +20,7 @@
 		6C42E4152A2FF1BA00AC7E50 /* CriptoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42E4132A2FF1BA00AC7E50 /* CriptoCell.swift */; };
 		6C42E4162A2FF1BA00AC7E50 /* CriptoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C42E4142A2FF1BA00AC7E50 /* CriptoCell.xib */; };
 		6C42E4182A2FFC3E00AC7E50 /* CriptoDetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42E4172A2FFC3E00AC7E50 /* CriptoDetalleViewController.swift */; };
+		6C42E41A2A30BE9200AC7E50 /* DetalleMonedaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42E4192A30BE9200AC7E50 /* DetalleMonedaViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		6C42E4132A2FF1BA00AC7E50 /* CriptoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoCell.swift; sourceTree = "<group>"; };
 		6C42E4142A2FF1BA00AC7E50 /* CriptoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CriptoCell.xib; sourceTree = "<group>"; };
 		6C42E4172A2FFC3E00AC7E50 /* CriptoDetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoDetalleViewController.swift; sourceTree = "<group>"; };
+		6C42E4192A30BE9200AC7E50 /* DetalleMonedaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleMonedaViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				6C3BA6EE2A2FCB8E00CB8422 /* CriptoViewModel.swift */,
+				6C42E4192A30BE9200AC7E50 /* DetalleMonedaViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				6C3BA6F42A2FCC2000CB8422 /* CriptomonedaModel.swift in Sources */,
 				6C42E4152A2FF1BA00AC7E50 /* CriptoCell.swift in Sources */,
 				6C42E4182A2FFC3E00AC7E50 /* CriptoDetalleViewController.swift in Sources */,
+				6C42E41A2A30BE9200AC7E50 /* DetalleMonedaViewModel.swift in Sources */,
 				6C3BA6DA2A2FCA9B00CB8422 /* AppDelegate.swift in Sources */,
 				6C3BA6F22A2FCBC700CB8422 /* Criptomoneda.swift in Sources */,
 				6C3BA6DC2A2FCA9B00CB8422 /* SceneDelegate.swift in Sources */,
@@ -347,7 +351,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 28Z45T22J2;
+				DEVELOPMENT_TEAM = 345UR7Z9A7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CriptoAppMVVM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -375,7 +379,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 28Z45T22J2;
+				DEVELOPMENT_TEAM = 345UR7Z9A7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CriptoAppMVVM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
