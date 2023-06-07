@@ -44,6 +44,11 @@ class CriptoDetalleViewController: UIViewController {
         precioLabel.text = monedaRecibida.precio
         activityIndicatorLoading.isHidden = true
     }
+    
+    private func ocultarLoader() {
+        activityIndicatorLoading.stopAnimating()
+        activityIndicatorLoading.isHidden = true
+    }
 
     private func configurarBindingsViewModel() {
         ///-* Se crea un binding de la propiedad showLoading para mostrar/ocultar un activity indicator
@@ -52,8 +57,7 @@ class CriptoDetalleViewController: UIViewController {
                 self?.activityIndicatorLoading.isHidden = false
                 self?.activityIndicatorLoading.startAnimating()
             } else {
-                self?.activityIndicatorLoading.stopAnimating()
-                self?.activityIndicatorLoading.isHidden = true
+                self?.ocultarLoader()
             }
         }.store(in: &cancellables)
         
@@ -72,6 +76,19 @@ class CriptoDetalleViewController: UIViewController {
                 //Show alert
                 DispatchQueue.main.async {
                     self?.mostrarAlerta(titulo: "Atención", mensaje: "No tienes conexion a internet para actualizar el precio de la moneda seleccionada. Verifica e intenta de nuevo.")
+                }
+            }
+        }.store(in: &cancellables)
+        
+        
+        
+        viewModel?.$errorMessage.sink { [weak self] error in
+            if error != "" {
+                DispatchQueue.main.async {
+                    self?.mostrarAlerta(titulo: "Atención", mensaje: error)
+                    print("Debug: $errorMessage \(error)")
+
+                    self?.ocultarLoader()
                 }
             }
         }.store(in: &cancellables)

@@ -31,8 +31,18 @@ class DetalleMonedaViewModel {
         showLoading = true
         
         webservice.getPriceBitcoin(cripto: cripto, currency: currency) { [weak self] currencyObj, error in
+            
             if error != nil {
-                self?.errorMessage = "Error: \(error!.localizedDescription)"
+                switch error as? NetworkError {
+                case .badResponse:
+                    self?.errorMessage = "Hubo un error en el servidor y no está disponible en estos momentos."
+                case .badURL:
+                    self?.errorMessage = "Hubo un error con la petición y el recurso al que deseas acceder ya no está disponible."
+                case .decodingError:
+                    self?.errorMessage = "Hubo un error al mostrar los datos."
+                case .none:
+                    print("Error")
+                }
             }
             
             guard let currencyObj = currencyObj else { return }

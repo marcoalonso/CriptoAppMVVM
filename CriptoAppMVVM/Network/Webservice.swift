@@ -7,6 +7,12 @@
 
 import Foundation
 
+enum NetworkError: Error {
+    case badResponse
+    case decodingError
+    case badURL
+}
+
 class Webservice {
     static let shared = Webservice()
     let apiKey = "86F7293F-835F-4675-9993-5EBA8D69A333"
@@ -21,6 +27,11 @@ class Webservice {
         
         if let url = URL(string: urlString) {
             URLSession.shared.dataTask(with: url) { data, respuesta, error in
+                
+                if error != nil {
+                    completionHandler(nil, NetworkError.badResponse)
+                }
+                
                 guard let data = data else { return }
                 
                 let decodificador = JSONDecoder()
@@ -31,9 +42,11 @@ class Webservice {
                     completionHandler(dataDecodificada, nil)
                 } catch {
                     print("Debug: error \(error.localizedDescription)")
-                    completionHandler(nil, error)
+                    completionHandler(nil, NetworkError.decodingError)
                 }
             }.resume()
+        } else {
+            completionHandler(nil, NetworkError.badURL)
         }
     }
 }
