@@ -9,7 +9,7 @@ import UIKit
 
 struct Criptomoneda {
     let nombre: String
-    let logo: UIImage
+    let logo: String
     let clave: String
     var precio: String?
     var fecha: String?

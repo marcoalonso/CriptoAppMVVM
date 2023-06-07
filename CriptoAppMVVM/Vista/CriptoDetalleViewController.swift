@@ -35,7 +35,7 @@ class CriptoDetalleViewController: UIViewController {
     private func configurarVista(){
         guard let monedaRecibida = recibirMoneda else { return }
         self.navigationItem.title = monedaRecibida.nombre
-        logoMoneda.image = monedaRecibida.logo
+        logoMoneda.image = UIImage(named: monedaRecibida.logo)
         fecha.text = monedaRecibida.fecha
         precioLabel.text = monedaRecibida.precio
         activityIndicatorLoading.isHidden = true
@@ -93,15 +93,4 @@ extension CriptoDetalleViewController: UIPickerViewDelegate, UIPickerViewDataSou
         getPrice(currency: currency)
     }
     
-    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let title = viewModel?.exchangeRate[row] ?? "-"
-        
-        let color = UIColor.white
-        
-        let attributes: [NSAttributedString.Key: Any] = [
-            .foregroundColor: color
-        ]
-        
-        return NSAttributedString(string: title, attributes: attributes)
-    }
 }
