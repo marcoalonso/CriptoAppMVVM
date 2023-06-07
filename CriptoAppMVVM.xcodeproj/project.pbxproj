@@ -23,7 +23,24 @@
 		6C42E41A2A30BE9200AC7E50 /* DetalleMonedaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42E4192A30BE9200AC7E50 /* DetalleMonedaViewModel.swift */; };
 		6C42E4202A30C9F900AC7E50 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6C42E41F2A30C9F900AC7E50 /* RealmSwift */; };
 		6C42E4222A30CABA00AC7E50 /* CriptomonedaRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42E4212A30CABA00AC7E50 /* CriptomonedaRealm.swift */; };
+		6C42E4312A30E48E00AC7E50 /* CriptoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42E4302A30E48E00AC7E50 /* CriptoViewModelTests.swift */; };
+		6C42E43A2A30E8E400AC7E50 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6C42E4392A30E8E400AC7E50 /* RealmSwift */; };
+		6C42E43C2A30E8E800AC7E50 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 6C42E43B2A30E8E800AC7E50 /* Realm */; };
+		6C42E43E2A30F57400AC7E50 /* MyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42E43D2A30F57400AC7E50 /* MyViewModel.swift */; };
+		6C42E4422A30FD8400AC7E50 /* WebserviceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42E4412A30FD8400AC7E50 /* WebserviceTests.swift */; };
+		6C4398042A3106760016E757 /* Response.json in Resources */ = {isa = PBXBuildFile; fileRef = 6C4398032A3106760016E757 /* Response.json */; };
+		6C4398062A31084F0016E757 /* Response.json in Resources */ = {isa = PBXBuildFile; fileRef = 6C4398052A31084F0016E757 /* Response.json */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6C42E42B2A30E45200AC7E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C3BA6CE2A2FCA9B00CB8422 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C3BA6D52A2FCA9B00CB8422;
+			remoteInfo = CriptoAppMVVM;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6C3BA6D62A2FCA9B00CB8422 /* CriptoAppMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CriptoAppMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +60,12 @@
 		6C42E4172A2FFC3E00AC7E50 /* CriptoDetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoDetalleViewController.swift; sourceTree = "<group>"; };
 		6C42E4192A30BE9200AC7E50 /* DetalleMonedaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleMonedaViewModel.swift; sourceTree = "<group>"; };
 		6C42E4212A30CABA00AC7E50 /* CriptomonedaRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptomonedaRealm.swift; sourceTree = "<group>"; };
+		6C42E4272A30E45200AC7E50 /* CriptoAppMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CriptoAppMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C42E4302A30E48E00AC7E50 /* CriptoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoViewModelTests.swift; sourceTree = "<group>"; };
+		6C42E43D2A30F57400AC7E50 /* MyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewModel.swift; sourceTree = "<group>"; };
+		6C42E4412A30FD8400AC7E50 /* WebserviceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebserviceTests.swift; sourceTree = "<group>"; };
+		6C4398032A3106760016E757 /* Response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Response.json; sourceTree = "<group>"; };
+		6C4398052A31084F0016E757 /* Response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Response.json; path = CriptoAppMVVM/Response.json; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +77,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6C42E4242A30E45200AC7E50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C42E43C2A30E8E800AC7E50 /* Realm in Frameworks */,
+				6C42E43A2A30E8E400AC7E50 /* RealmSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,7 +93,9 @@
 			isa = PBXGroup;
 			children = (
 				6C3BA6D82A2FCA9B00CB8422 /* CriptoAppMVVM */,
+				6C42E4282A30E45200AC7E50 /* CriptoAppMVVMTests */,
 				6C3BA6D72A2FCA9B00CB8422 /* Products */,
+				6C42E4382A30E8E400AC7E50 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				6C3BA6D62A2FCA9B00CB8422 /* CriptoAppMVVM.app */,
+				6C42E4272A30E45200AC7E50 /* CriptoAppMVVMTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,6 +111,7 @@
 		6C3BA6D82A2FCA9B00CB8422 /* CriptoAppMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				6C4398032A3106760016E757 /* Response.json */,
 				6C3BA6D92A2FCA9B00CB8422 /* AppDelegate.swift */,
 				6C3BA6DB2A2FCA9B00CB8422 /* SceneDelegate.swift */,
 				6C3BA6F52A2FCCD300CB8422 /* Network */,
@@ -94,6 +130,7 @@
 			children = (
 				6C3BA6EE2A2FCB8E00CB8422 /* CriptoViewModel.swift */,
 				6C42E4192A30BE9200AC7E50 /* DetalleMonedaViewModel.swift */,
+				6C42E43D2A30F57400AC7E50 /* MyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -128,6 +165,23 @@
 			path = Vista;
 			sourceTree = "<group>";
 		};
+		6C42E4282A30E45200AC7E50 /* CriptoAppMVVMTests */ = {
+			isa = PBXGroup;
+			children = (
+				6C4398052A31084F0016E757 /* Response.json */,
+				6C42E4302A30E48E00AC7E50 /* CriptoViewModelTests.swift */,
+				6C42E4412A30FD8400AC7E50 /* WebserviceTests.swift */,
+			);
+			path = CriptoAppMVVMTests;
+			sourceTree = "<group>";
+		};
+		6C42E4382A30E8E400AC7E50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,6 +196,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6C42E4332A30E86000AC7E50 /* PBXTargetDependency */,
 			);
 			name = CriptoAppMVVM;
 			packageProductDependencies = (
@@ -150,6 +205,30 @@
 			productName = CriptoAppMVVM;
 			productReference = 6C3BA6D62A2FCA9B00CB8422 /* CriptoAppMVVM.app */;
 			productType = "com.apple.product-type.application";
+		};
+		6C42E4262A30E45200AC7E50 /* CriptoAppMVVMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C42E42D2A30E45200AC7E50 /* Build configuration list for PBXNativeTarget "CriptoAppMVVMTests" */;
+			buildPhases = (
+				6C42E4232A30E45200AC7E50 /* Sources */,
+				6C42E4242A30E45200AC7E50 /* Frameworks */,
+				6C42E4252A30E45200AC7E50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C42E4372A30E89000AC7E50 /* PBXTargetDependency */,
+				6C42E42C2A30E45200AC7E50 /* PBXTargetDependency */,
+				6C42E4352A30E86800AC7E50 /* PBXTargetDependency */,
+			);
+			name = CriptoAppMVVMTests;
+			packageProductDependencies = (
+				6C42E4392A30E8E400AC7E50 /* RealmSwift */,
+				6C42E43B2A30E8E800AC7E50 /* Realm */,
+			);
+			productName = CriptoAppMVVMTests;
+			productReference = 6C42E4272A30E45200AC7E50 /* CriptoAppMVVMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -163,6 +242,10 @@
 				TargetAttributes = {
 					6C3BA6D52A2FCA9B00CB8422 = {
 						CreatedOnToolsVersion = 14.3.1;
+					};
+					6C42E4262A30E45200AC7E50 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 6C3BA6D52A2FCA9B00CB8422;
 					};
 				};
 			};
@@ -183,6 +266,7 @@
 			projectRoot = "";
 			targets = (
 				6C3BA6D52A2FCA9B00CB8422 /* CriptoAppMVVM */,
+				6C42E4262A30E45200AC7E50 /* CriptoAppMVVMTests */,
 			);
 		};
 /* End PBXProject section */
@@ -199,6 +283,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6C42E4252A30E45200AC7E50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C4398062A31084F0016E757 /* Response.json in Resources */,
+				6C4398042A3106760016E757 /* Response.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -208,6 +301,7 @@
 			files = (
 				6C42E4222A30CABA00AC7E50 /* CriptomonedaRealm.swift in Sources */,
 				6C3BA6DE2A2FCA9B00CB8422 /* CriptomonedasViewController.swift in Sources */,
+				6C42E43E2A30F57400AC7E50 /* MyViewModel.swift in Sources */,
 				6C3BA6F72A2FCCDC00CB8422 /* Webservice.swift in Sources */,
 				6C3BA6EF2A2FCB8E00CB8422 /* CriptoViewModel.swift in Sources */,
 				6C3BA6F42A2FCC2000CB8422 /* CriptomonedaModel.swift in Sources */,
@@ -220,7 +314,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6C42E4232A30E45200AC7E50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C42E4312A30E48E00AC7E50 /* CriptoViewModelTests.swift in Sources */,
+				6C42E4422A30FD8400AC7E50 /* WebserviceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C42E42C2A30E45200AC7E50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C3BA6D52A2FCA9B00CB8422 /* CriptoAppMVVM */;
+			targetProxy = 6C42E42B2A30E45200AC7E50 /* PBXContainerItemProxy */;
+		};
+		6C42E4332A30E86000AC7E50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 6C42E4322A30E86000AC7E50 /* RealmSwift */;
+		};
+		6C42E4352A30E86800AC7E50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 6C42E4342A30E86800AC7E50 /* RealmSwift */;
+		};
+		6C42E4372A30E89000AC7E50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 6C42E4362A30E89000AC7E50 /* Realm */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6C3BA6DF2A2FCA9B00CB8422 /* Main.storyboard */ = {
@@ -412,6 +535,50 @@
 			};
 			name = Release;
 		};
+		6C42E42E2A30E45200AC7E50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 28Z45T22J2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rotadevsolutions.CriptoAppMVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CriptoAppMVVM.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CriptoAppMVVM";
+			};
+			name = Debug;
+		};
+		6C42E42F2A30E45200AC7E50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 28Z45T22J2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rotadevsolutions.CriptoAppMVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CriptoAppMVVM.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CriptoAppMVVM";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -429,6 +596,15 @@
 			buildConfigurations = (
 				6C3BA6EB2A2FCA9C00CB8422 /* Debug */,
 				6C3BA6EC2A2FCA9C00CB8422 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C42E42D2A30E45200AC7E50 /* Build configuration list for PBXNativeTarget "CriptoAppMVVMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C42E42E2A30E45200AC7E50 /* Debug */,
+				6C42E42F2A30E45200AC7E50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -451,6 +627,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6C42E41E2A30C9F900AC7E50 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		6C42E4322A30E86000AC7E50 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C42E41E2A30C9F900AC7E50 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		6C42E4342A30E86800AC7E50 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C42E41E2A30C9F900AC7E50 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		6C42E4362A30E89000AC7E50 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C42E41E2A30C9F900AC7E50 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		6C42E4392A30E8E400AC7E50 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C42E41E2A30C9F900AC7E50 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		6C42E43B2A30E8E800AC7E50 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C42E41E2A30C9F900AC7E50 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
